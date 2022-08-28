@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>passwordgenerater.com || Generate unique password</title>
+  </head>
+  <body>
+    <div class="box">
+      <h2>Random Password Generater</h2>
+      <input type="text" placeholder="Create Password" id="password" readonly />
+      <table>
+        <th>
+          <div class="btn1" id="button" onclick="genPassword()">Generate</div>
+        </th>
+        <th>
+          <a class="btn2" id="button" onclick="copyPassword()">Copy</a>
+        </th>
+      </table>
+    </div>
+    <script>
+      let password = document.getElementById("password");
+      function genPassword() {
+        let chars =
+          "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let passwordLength = 12;
+        let password = "";
+        for (let i = 0; i < passwordLength; i++) {
+          let randomNumber = Math.floor(Math.random() * chars.length);
+          password += chars.substring(randomNumber, randomNumber + 1);
+        }
+        document.getElementById("password").value = password;
+      }
+      function copyPassword() {
+        let copyText = document.getElementById("password");
+        copyText.select();
+        copyText.setSelectionRange(0, 999);
+        document.execCommand("copy");
+      }
+    </script>
+  </body>
+</html>
