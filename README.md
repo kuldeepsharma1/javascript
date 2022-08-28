@@ -1,2 +1,2 @@
 # hytek
-This is demo repository
+This is JavaScript repository
