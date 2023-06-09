@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RQJ The New Way To Motivate Yourself</title>
+    <meta name="description" content="The Personal Hobby Project For Just To Try fun With JS">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script>
+        // Random Quote Generator
+
+        // Array of quotes
+        // const quotes = [
+        //     "The only way to do great work is to love what you do. - Steve Jobs",
+        //     "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+        //     "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+        //     "Believe you can and you're halfway there. - Theodore Roosevelt",
+        //     "The secret of getting ahead is getting started. - Mark Twain",
+        //     "The best time to plant a tree was 20 years ago. The second best time is now. - Chinese Proverb",
+        // ];
+
+        // Function to generate a random quote
+       
+  // Random Quote Generator
+
+  async function generateRandomQuote() {
+    const response = await fetch('quotes.csv');
+    const data = await response.text();
+    const quotes = data.split(';');
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const quote = quotes[randomIndex];
+    document.getElementById('quote').textContent = quote;
+  }
+
+
+    </script>
+</head>
+
+<body>
+
+    <body>
+        <h1>Random Quote Generator</h1>
+        <button onclick="generateRandomQuote()">Generate Quote</button>
+        <p id="quote"></p>
+
+
+    </body>
+
+</html>
