@@ -1,0 +1,15 @@
+{
+  "name": "sentiment-analysis-bert",
+  "version": "1.0.0",
+  "description": "This is a test For sentiment analysis using bert model pretrained model bert is use",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.7.0",
+    "tensorflow-models": "^0.0.1"
+  }
+}
