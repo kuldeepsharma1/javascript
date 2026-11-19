@@ -79,7 +79,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <footer className="border-t border-zinc-200/80 bg-white/60 py-8 dark:border-zinc-800/80 dark:bg-zinc-950">
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 text-xs text-zinc-500 sm:flex-row sm:px-6 lg:px-8 dark:text-zinc-400">
             <p className="font-medium text-zinc-600 dark:text-zinc-400">
-              © {new Date().getFullYear()} My Store. All rights reserved.
+            © 2026 My Store. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <Link
